@@ -1,10 +1,12 @@
 package ir.arefdev.irdebitcardscanner;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 /**
  * The ScanActivity class provides the main interface to the scanning functionality. To use this
@@ -41,6 +43,15 @@ public class ScanActivity {
 		intent.putExtra(ScanActivityImpl.SCAN_CARD_TEXT, scanCardText);
 		intent.putExtra(ScanActivityImpl.POSITION_CARD_TEXT, positionCardText);
 		activity.startActivityForResult(intent, REQUEST_CODE);
+	}
+
+	public static void start(@NonNull Fragment fragment, String scanCardText, String positionCardText) {
+		Context context = fragment.getContext();
+		ScanBaseActivity.warmUp(context);
+		Intent intent = new Intent(context, ScanActivityImpl.class);
+		intent.putExtra(ScanActivityImpl.SCAN_CARD_TEXT, scanCardText);
+		intent.putExtra(ScanActivityImpl.POSITION_CARD_TEXT, positionCardText);
+		fragment.startActivityForResult(intent, REQUEST_CODE);
 	}
 
 	/**
