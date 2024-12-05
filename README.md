@@ -1,8 +1,8 @@
-[![](https://jitpack.io/v/arefbhrn/IRDebitCardScanner.svg)](https://jitpack.io/#arefbhrn/IRDebitCardScanner)
+[![](https://jitpack.io/v/djakonystar/UzDebitCardScanner.svg)](https://jitpack.io/#djakonystar/UzDebitCardScanner)
 
-## IR Debit Card Scanner
+## UZ Debit Card Scanner
 
-A lightweight android library to scan Iranian debit cards fast and realtime using Deep Learning and TensorFlow-Lite.
+A lightweight android library to scan Uzbekish debit cards fast and realtime using Deep Learning and TensorFlow-Lite.
 This library scans valid card numbers only.
 Keep in mind that split ABIs while releasing your app to reduce its size.
 
@@ -18,7 +18,7 @@ Gradle:
 
 ```
 dependencies {
-    implementation 'com.github.arefbhrn:IRDebitCardScanner:1.0.0'
+    implementation 'com.github.djakonystar:UzDebitCardScanner:$version'
 }
 ```
 
@@ -59,13 +59,6 @@ ScanActivity.start(this, "IRDC Scanner",
         "Position your card in the frame so the card number is visible");
 ```
 In this mode texts in scanner activity would be set as you prefer.
-
-## Contact me
-
-If you have a better idea or way on this project, please let me know. Thanks :) ?:
-
-- [Email](mailto:arefprivate@gmail.com)
-- [Website [En]](http://arefdev.ir/en) - [Website [Fa]](http://arefdev.ir)
 
 License
 ---------------------------
