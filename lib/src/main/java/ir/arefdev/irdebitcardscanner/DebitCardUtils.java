@@ -9,6 +9,7 @@ class DebitCardUtils {
 	private static final String CARD_TYPE_ATTO = "b_atto";
 	private static final String CARD_TYPE_VISA = "b_visa";
 	private static final String CARD_TYPE_MASTERCARD = "b_mastercard";
+	private static final String CARD_TYPE_UNION_PAY = "b_union_pay";
 
 	private static HashMap<String, String> CARD_NUMBER_STARTER = new HashMap<>();
 
@@ -18,6 +19,7 @@ class DebitCardUtils {
 			CARD_NUMBER_STARTER.put("8600", CARD_TYPE_UZCARD);
 			CARD_NUMBER_STARTER.put("9860", CARD_TYPE_HUMO);
 			CARD_NUMBER_STARTER.put("9987", CARD_TYPE_ATTO);
+			CARD_NUMBER_STARTER.put("6262", CARD_TYPE_UNION_PAY);
 			CARD_NUMBER_STARTER.put("4", CARD_TYPE_VISA);
 
 			for (int i = 1; i <= 5; i++) {
