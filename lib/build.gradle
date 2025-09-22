@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'org.jetbrains.kotlin.android'
 
 group = 'com.arefbhrn.libraries'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 35
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 29
+        namespace 'ir.arefdev.irdebitcardscanner'
+        minSdkVersion 23
+        targetSdkVersion 35
         versionCode 2
         versionName "1.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -25,47 +26,48 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
-    implementation 'org.tensorflow:tensorflow-lite:2.2.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.7.0'
+    implementation 'org.tensorflow:tensorflow-lite:2.17.0'
 //    implementation 'org.tensorflow:tensorflow-lite-gpu:2.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            name 'IRDebitCardScanner'
-            description 'Iranian Debit Card Scanner using Deep Learning and TensorFlow Lite for Android'
-            url 'https://github.com/arefbhrn/IRDebitCardScanner'
-            inceptionYear '2020'
-
-            packaging 'aar'
-            groupId 'com.arefbhrn.libraries'
-            artifactId 'IRDebitCardScanner'
-            version '1.0.1'
-
-            licenses {
-                license {
-                    name 'GNU Affero General Public License (AGPL) version 3.0'
-                    url 'https://opensource.org/licenses/AGPL-3.0'
-                }
-            }
-            scm {
-                connection 'https://github.com/arefbhrn/IRDebitCardScanner'
-                url 'https://github.com/arefbhrn/IRDebitCardScanner'
-
-            }
-            developers {
-                developer {
-                    id = 'arefbhrn'
-                    name 'Aref Bahreini Nejad'
-                }
-            }
-        }
-    }
-}
+//install {
+//    repositories.mavenInstaller {
+//        pom.project {
+//            name 'IRDebitCardScanner'
+//            description 'Iranian Debit Card Scanner using Deep Learning and TensorFlow Lite for Android'
+//            url 'https://github.com/arefbhrn/IRDebitCardScanner'
+//            inceptionYear '2020'
+//
+//            packaging 'aar'
+//            groupId 'com.arefbhrn.libraries'
+//            artifactId 'IRDebitCardScanner'
+//            version '1.0.1'
+//
+//            licenses {
+//                license {
+//                    name 'GNU Affero General Public License (AGPL) version 3.0'
+//                    url 'https://opensource.org/licenses/AGPL-3.0'
+//                }
+//            }
+//            scm {
+//                connection 'https://github.com/arefbhrn/IRDebitCardScanner'
+//                url 'https://github.com/arefbhrn/IRDebitCardScanner'
+//
+//            }
+//            developers {
+//                developer {
+//                    id = 'arefbhrn'
+//                    name 'Aref Bahreini Nejad'
+//                }
+//            }
+//        }
+//    }
+//}
 
