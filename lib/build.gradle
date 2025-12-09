@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'maven-publish'
 
 group = 'com.arefbhrn.libraries'
 
@@ -14,6 +14,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         renderscriptTargetApi 18
         renderscriptSupportModeEnabled true
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
     }
 
     buildTypes {
@@ -36,6 +43,20 @@ dependencies {
 //    implementation 'org.tensorflow:tensorflow-lite-gpu:2.17.0'
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.arefbhrn.libraries'
+                artifactId = 'IRDebitCardScanner'
+                version = '1.1.4'
+
+                from components.release
+            }
+        }
+    }
+}
+
 //install {
 //    repositories.mavenInstaller {
 //        pom.project {
@@ -47,7 +68,7 @@ dependencies {
 //            packaging 'aar'
 //            groupId 'com.arefbhrn.libraries'
 //            artifactId 'IRDebitCardScanner'
-//            version '1.0.1'
+//            version '1.1.2'
 //
 //            licenses {
 //                license {
