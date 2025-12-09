@@ -23,8 +23,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import java.io.File;
 import java.io.IOException;
@@ -121,8 +125,7 @@ abstract class ScanBaseActivity extends Activity implements Camera.PreviewCallba
             Overlay overlay = findViewById(overlayId);
             overlay.setCircle(rect, radius);
 
-            ScanBaseActivity.this.mRoiCenterYRatio =
-                    (xy[1] + view.getHeight() * 0.5f) / overlay.getHeight();
+            ScanBaseActivity.this.mRoiCenterYRatio = (xy[1] + view.getHeight() * 0.5f) / overlay.getHeight();
         }
     }
 
