@@ -144,7 +144,7 @@ abstract class ScanBaseActivity extends Activity implements Camera.PreviewCallba
                 }
             });
             AlertDialog dialog = builder.create();
-//            dialog.show();
+            dialog.show();
         }
     }
 
@@ -197,7 +197,7 @@ abstract class ScanBaseActivity extends Activity implements Camera.PreviewCallba
                 }
             });
             AlertDialog dialog = builder.create();
-//            dialog.show();
+            dialog.show();
         }
     }
 
