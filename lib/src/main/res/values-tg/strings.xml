@@ -1,0 +1,9 @@
+<resources>
+    <string name="scan_card">Сканкунии корти бонкӣ</string>
+    <string name="position_card">Кортро дар ин чорчӯба ҷойгир кунед</string>
+    <string name="deny_permission_title">Иҷозати дастрасӣ ба камера лозим аст</string>
+    <string name="deny_permission_message">Барои скан кардани корт иҷозати камераро тасдиқ кардан лозим аст</string>
+    <string name="deny_permission_button">Тасдиқ</string>
+    <string name="busy_camera_title">Истифодаи камера ғайриимкон аст</string>
+    <string name="busy_camera">Барномаи дигар камераро истифода мебарад</string>
+</resources>

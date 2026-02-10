@@ -1,0 +1,9 @@
+<resources>
+    <string name="scan_card">Банк картасын сканерлөө</string>
+    <string name="position_card">Картаны ушул талаага жайгаштырыңыз</string>
+    <string name="deny_permission_title">Камерага уруксат талап кылынат</string>
+    <string name="deny_permission_message">Картаны сканерлөө үчүн камерага уруксатты ырастоо керек</string>
+    <string name="deny_permission_button">Ырастоо</string>
+    <string name="busy_camera_title">Камераны колдонуу мүмкүн эмес</string>
+    <string name="busy_camera">Башка колдонмо камераны колдонуп жатат</string>
+</resources>

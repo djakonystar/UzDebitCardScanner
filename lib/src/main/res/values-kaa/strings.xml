@@ -1,0 +1,9 @@
+<resources>
+    <string name="scan_card">Bank kartasın skanerlew</string>
+    <string name="position_card">Kartanı usı aymaqqa jaylastırıń</string>
+    <string name="deny_permission_title">Kamerag‘a ruxsat kerek</string>
+    <string name="deny_permission_message">Kartanı skanerlew ushın kameraǵa ruxsat beriwdi tastıqlaw kerek</string>
+    <string name="deny_permission_button">Tastıqlaw</string>
+    <string name="busy_camera_title">Kameranı paydalanıw múmkin emes</string>
+    <string name="busy_camera">Basqa qosımsha kameraдан paydalanıp atır</string>
+</resources>
